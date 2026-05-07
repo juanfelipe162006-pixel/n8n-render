@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: n8n-academia
+    env: docker
+    plan: starter
+    region: oregon
+    persistence:
+      name: n8n-storage
+      mountPath: /home/node/.n8n
+      sizeGB: 1
+    envVars:
+      - key: N8N_PORT
+        value: 10000
+      - key: N8N_ENCRYPTION_KEY
+        generateValue: true
+      - key: N8N_USER_MANAGEMENT_JWT_SECRET
+        generateValue: true
