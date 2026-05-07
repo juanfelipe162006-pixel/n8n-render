@@ -1,13 +1,9 @@
 services:
   - type: web
-    name: n8n-academia
+    name: n8n-academia-gratis
     runtime: docker
-    plan: starter
+    plan: free
     region: oregon
-    disk:
-      name: n8n-storage
-      mountPath: /home/node/.n8n
-      sizeGB: 1
     envVars:
       - key: N8N_PORT
         value: 10000
