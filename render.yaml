@@ -1,10 +1,10 @@
 services:
   - type: web
     name: n8n-academia
-    env: docker
+    runtime: docker
     plan: starter
     region: oregon
-    persistence:
+    disk:
       name: n8n-storage
       mountPath: /home/node/.n8n
       sizeGB: 1
